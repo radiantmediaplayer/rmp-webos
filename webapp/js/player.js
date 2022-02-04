@@ -7,11 +7,11 @@ var playerButtons = [
 ];
 
 var container = document.getElementById('rmpPlayer');
-var currentActiveButtonId, rmp, isPaused;
+var currentActiveButtonId, rmp;
 var currentActiveButton;
 
 var _createEvent = function (eventName, element) {
-  let event;
+  var event;
   if (element) {
     try {
       event = new Event(eventName);
