@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>DASH VOD AVC</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+	<script src="https://cdn.radiantmediatechs.com/rmp/7.3.7/js/rmp.min.js"></script>
+	<div id="rmpPlayer"></div>
+	<script>
+		var src = {
+			dash: 'https://www.radiantmediaplayer.com/media/dash/4k-av1/manifest.mpd'
+		};
+		var settings = {
+			licenseKey: 'Kl8lbz16cz1rN2l2enM9Z2M9NnZvMnllaT9yb201ZGFzaXMzMGRiMEElXyo=',
+			src: src,
+			delayToFade: 5000,
+			autoplay: true,
+			contentMetadata: {
+				title: 'DASH VOD AV1 (WebM container)',
+			},
+			skin: 'tv'
+		};
+		var elementID = 'rmpPlayer';
+		window.rmp = new RadiantMP(elementID);
+		window.rmp.init(settings);
+	</script>
+	<script src="js/player.js"></script>
+</body>
+
+</html>

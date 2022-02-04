@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="Example for using Radiant Media Player in a web-based LG TV app (webOS)">
+  <title>Key Checker (webOS) - Radiant Media Player</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="robots" content="noindex">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col">
+        <h1>Radiant Media Player</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2>Key Checker</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p id="key"></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    var key = document.getElementById('key');
+    var _onKeyDown = function (e) {
+      var keyCode = e.keyCode;
+      key.textContent = keyCode;
+    };
+    document.body.addEventListener('keydown', _onKeyDown);
+  </script>
+</body>
+
+</html>

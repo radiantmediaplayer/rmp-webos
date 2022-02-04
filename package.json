@@ -1,0 +1,25 @@
+{
+  "name": "rmp-webos",
+  "version": "1.0.0",
+  "author": "Radiant Media Player <support@radiantmediaplayer.com>",
+  "description": "A demo app for using Radiant Media Player in a WebOS TV app (LG smart TV)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radiantmediaplayer/rmp-webos.git"
+  },
+  "main": "index.html",
+  "keywords": [
+    "smart",
+    "webos",
+    "tv",
+    "html5",
+    "video",
+    "javascript",
+    "lg"
+  ],
+  "bugs": {
+    "url": "https://github.com/radiantmediaplayer/rmp-webos/issues"
+  },
+  "homepage": "https://www.radiantmediaplayer.com/docs/latest/lg-smart-tv.html",
+  "license": "MIT"
+}
