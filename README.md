@@ -32,7 +32,7 @@ Our demo holds a basic appinfo.json file that is typical of LG TV app. This demo
 
 ## Issues
 
-Issues for this demo app should be submitted in this GitHub page. We will do our best to review them. If you are a Radiant Media Player customers and need support with our player please [open a ticket here](https://www.radiantmediaplayer.com/technical-support.html).
+Issues for this demo app should be submitted in this GitHub page. We will do our best to review them. If you are a Radiant Media Player customer and need support with our player please [open a ticket here](https://www.radiantmediaplayer.com/technical-support.html).
 
 ## License for rmp-webos
 
