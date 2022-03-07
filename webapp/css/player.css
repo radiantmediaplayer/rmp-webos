@@ -28,7 +28,7 @@
   display: none !important;
 }
 
-/* hide rewind/forward icons with live and when ads are on */
+/* hide rewind/forward icons with live and ads */
 .rmp-tv-player.rmp-linear-ad-ui .rmp-i-fast-forward,
 .rmp-tv-player.rmp-linear-ad-ui .rmp-i-fast-rewind,
 .rmp-tv-player.rmp-linear-ad-ui .rmp-i-quick-forward-tv,
