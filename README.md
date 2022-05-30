@@ -8,7 +8,7 @@ You can use Radiant Media Player to build media-oriented LG Smart TV application
 The player is equipped with various optimisations, notably file:// protocol support, to work in the following environments:
 
 - Web applications for LG smart TV built for webOS 5+
-- Web applications for LG smart TV built for webOS 3+ with our legacy player build
+- Web applications for LG smart TV built for webOS 3+ with our [legacy player build](https://www.radiantmediaplayer.com/docs/latest/ie-11-support.html)
 
 To get started with your first webOS TV Application [follow that guide](https://webostv.developer.lge.com/develop/overview/building-your-first-web-app-webos-tv/).
 
