@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>DASH VOD AVC</title>
+	<title>DASH DVR</title>
 	<link rel="stylesheet" type="text/css" href="css/player.css">
 	<meta name="robots" content="noindex">
 </head>
@@ -13,15 +13,15 @@
 	<div id="rmp"></div>
 	<script>
 		var src = {
-			dash: 'https://www.radiantmediaplayer.com/media/dash/4k-vp9-opus-webm-quality-watermark/manifest.mpd'
+			dash: 'https://5b44cf20b0388.streamlock.net:8443/dvr/dvr/manifest.mpd?DVR'
 		};
 		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
-			autoplay: true,
 			delayToFade: 5000,
+			autoplay: true,
 			contentMetadata: {
-				title: 'DASH VOD VP9',
+				title: 'DASH DVR',
 			},
 			skin: 'tv'
 		};
@@ -48,7 +48,7 @@
 		rmpScript.addEventListener('error', _onErrorLog);
 		document.head.appendChild(rmpScript);
 	</script>
-	<script src="js/player.js"></script>
+	<script src="js/player-live.js"></script>
 </body>
 
 </html>

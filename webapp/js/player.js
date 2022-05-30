@@ -6,8 +6,8 @@ var playerButtons = [
   { id: 5, name: 'fastForward', element: null }
 ];
 
-var container = document.getElementById('rmpPlayer');
-var currentActiveButtonId, rmp;
+var container = document.getElementById('rmp');
+var currentActiveButtonId;
 var currentActiveButton;
 
 var _createEvent = function (eventName, element) {
@@ -68,24 +68,24 @@ var _triggerButton = function () {
 // we deal with 2 kind of remote: Basic Device, Smart Control 2016
 
 var _onKeyDown = function (e) {
-  var currentTime = rmp.getCurrentTime();
+  var currentTime = window.rmp.getCurrentTime();
   var keyCode = e.keyCode;
-  rmp.setControlsVisible(true);
+  window.rmp.setControlsVisible(true);
   switch (keyCode) {
     case 412: // MediaRewind 
-      rmp.seekTo(currentTime - 10000);
+      window.rmp.seekTo(currentTime - 10000);
       break;
     case 417: // MediaFastForward 
-      rmp.seekTo(currentTime + 10000);
+      window.rmp.seekTo(currentTime + 10000);
       break;
     case 415: // MediaPlay
-      rmp.play();
+      window.rmp.play();
       break;
     case 19: // MediaPause
-      rmp.pause();
+      window.rmp.pause();
       break;
     case 413: // MediaStop
-      rmp.stop();
+      window.rmp.stop();
       break;
     case 37: // ArrowLeft
     case 38: // ArrowUp
@@ -103,7 +103,6 @@ var _onKeyDown = function (e) {
 
 // when player is ready we wire the UI
 container.addEventListener('ready', function () {
-  rmp = window.rmp;
   playerButtons[0].element = container.querySelector('.rmp-i-fast-rewind');
   playerButtons[0].element.setAttribute('data-button-id', '0');
   playerButtons[1].element = container.querySelector('.rmp-i-quick-rewind-tv');
