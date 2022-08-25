@@ -26,6 +26,7 @@ Our demo holds a basic appinfo.json file that is typical of LG TV app. This demo
 
 ## Support notes
 
+- We recommend using MPEG-DASH streaming for LG TVs. While it is technically possible to use HLS or MP4 progressive download on webOS platform we do not officially support those use-cases. 
 - According to our tetsing, AV1 support can be clunky on older webOS versions (even if they advertise support for it). AVC, VP9 or HEVC should be preferred if you wish to support older versions of webOS.
 - Google IMA (video ads) is not currently supported, please use our rmp-vast parser to display video ads on LG Smart TV.
 - Make sure to test your app on an actual LG TV - the LG TV emulator provided in the webOS SDK may not support all media features.
