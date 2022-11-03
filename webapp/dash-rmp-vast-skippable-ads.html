@@ -23,6 +23,8 @@
 				title: 'DASH with skippable video ads (rmp-vast)',
 			},
 			autoplay: true,
+			capLevelToPlayerSize: false,
+			disableKeyboardControl: true,
 			ads: true,
 			adParser: 'rmp-vast',
 			adTagUrl: 'https://www.radiantmediaplayer.com/vast/tags/inline-linear-skippable.xml',
@@ -42,7 +44,7 @@
 		// Feature detection for newer browsers that support module import/export
 		var newerBrowsers = 'noModule' in HTMLScriptElement.prototype;
 		if (newerBrowsers) {
-			rmpScript.src = 'https://cdn.radiantmediatechs.com/rmp/7.8.1/js/rmp.min.js';
+			rmpScript.src = 'https://cdn.radiantmediatechs.com/rmp/7.11.8/js/rmp.min.js';
 		} else {
 			rmpScript.src = 'https://cdn.radiantmediatechs.com/rmp/0.1.0/js/rmp.min.js';
 		}
