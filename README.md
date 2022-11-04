@@ -10,19 +10,19 @@ The player is equipped with various optimisations, notably file:// protocol supp
 - Web applications for LG smart TV built for webOS 5+
 - Web applications for LG smart TV built for webOS 3+ with our [legacy player build](https://www.radiantmediaplayer.com/docs/latest/ie-11-support.html)
 
-To get started with your first webOS TV Application [follow that guide](https://webostv.developer.lge.com/develop/overview/building-your-first-web-app-webos-tv/).
+To get started with your first webOS TV Application [follow that guide](https://webostv.developer.lge.com/develop/getting-started).
 
 For a list of supported features [see our documentation](https://www.radiantmediaplayer.com/docs/latest/lg-smart-tv.html#supported-features).
 
 ## Demo app structure
 
-We use the [Hosted Web App](https://webostv.developer.lge.com/develop/app-developer-guide/hosted-web-app/) approach to build this demo app for webOS.
+We use the [Hosted Web App](https://webostv.developer.lge.com/develop/getting-started/web-app-types) approach to build this demo app for webOS.
 
 Our live demo app can [be found here](https://www.radiantmediaplayer.com/rmp-webos/) and is presented here in the webapp folder.
 
 Players displayed in our demo app use our dedicated TV player layout for a better fullscreen experience on large displays.
 
-Our demo holds a basic appinfo.json file that is typical of LG TV app. This demo app can be packaged and deploy on an actual LG TV for testing using the [ares-* commmands](https://webostv.developer.lge.com/sdk/command-line-interface/testing-web-app-cli/).
+Our demo holds a basic appinfo.json file that is typical of LG TV app. This demo app can be packaged and deploy on an actual LG TV for testing using the [ares-* commmands](https://webostv.developer.lge.com/develop/tools/cli-introduction).
 
 ## Support notes
 
