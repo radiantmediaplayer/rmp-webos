@@ -7,9 +7,7 @@ A demo app for using [Radiant Media Player](https://www.radiantmediaplayer.com) 
 You can use Radiant Media Player to build media-oriented LG Smart TV applications.
 The player is equipped with various optimisations, notably file:// protocol support, to work in the following environments:
 
-- Web applications for LG smart TV built for webOS 5+
-- Web applications for LG smart TV built for webOS 3+ with our [legacy player build](https://www.radiantmediaplayer.com/docs/latest/ie-11-support.html)
-
+- Web applications for LG smart TV built for webO3 5+
 To get started with your first webOS TV Application [follow that guide](https://webostv.developer.lge.com/develop/getting-started).
 
 For a list of supported features [see our documentation](https://www.radiantmediaplayer.com/docs/latest/lg-smart-tv.html#supported-features).
@@ -26,7 +24,7 @@ Our demo holds a basic appinfo.json file that is typical of LG TV app. This demo
 
 ## Support notes
 
-- We currently only support using MPEG-DASH for streaming to LG TVs. While it is technically possible to use HLS or MP4 progressive download on webOS platform we do not officially support those use-cases. 
+- We support streaming to LG TVs in MPEG-DASH or CMAF HLS (HLS in MPEG-TS format is not supported).
 - According to our tetsing, AV1 support can be clunky on older webOS versions (even if they advertise support for it). AVC, VP9 or HEVC should be preferred if you wish to support older versions of webOS.
 - Google IMA (video ads) is not currently supported, please use our rmp-vast parser to display video ads on LG Smart TV.
 - Make sure to test your app on an actual LG TV - the LG TV emulator provided in the webOS SDK may not support all media features.

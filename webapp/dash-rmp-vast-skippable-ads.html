@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/8.1.3/js/rmp-shaka.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/8.3.5/js/rmp.min.js"></script>
 	<div id="rmp"></div>
 	<script>
 		var src = {
@@ -29,7 +29,7 @@
 			disableKeyboardControl: true,
 			ads: true,
 			adParser: 'rmp-vast',
-			adTagUrl: 'https://www.radiantmediaplayer.com/vast/tags/inline-linear-skippable.xml',
+			adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=' + Date.now(),
 			skin: 'tv'
 		};
 		window.rmp = new RadiantMP('rmp');
