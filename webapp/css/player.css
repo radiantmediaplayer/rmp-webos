@@ -5,8 +5,9 @@
   color: #ff1744;
 }
 
-.rmp-overlay-level.rmp-button-hover {
-  border-color: #ff1744;
+.rmp-overlay-level.rmp-button-hover,
+.rmp-ad-container-skip.rmp-button-hover {
+  border: 2px solid #ff1744;
 }
 
 /* 
@@ -26,10 +27,4 @@
 
 .rmp-tv .rmp-module-overlay-icons.rmp-module-overlay-play-pause {
   display: none !important;
-}
-
-/* cap title/description size */
-.rmp-tv .rmp-title,
-.rmp-tv .rmp-description {
-  max-width: 50%;
 }

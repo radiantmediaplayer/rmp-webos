@@ -8,7 +8,6 @@ var playerButtons = [
 
 var container = document.getElementById('rmp');
 var currentActiveButtonId;
-var currentActiveButton;
 
 var _createEvent = function (eventName, element) {
   var event;
@@ -35,7 +34,6 @@ var _setActiveButton = function (id) {
 };
 
 var _handleButtons = function (keyCode) {
-  currentActiveButton = container.querySelector('.rmp-button-hover');
   _removeHoverClass();
   var newId;
   switch (keyCode) {
@@ -60,7 +58,7 @@ var _handleButtons = function (keyCode) {
 };
 
 var _triggerButton = function () {
-  currentActiveButton = container.querySelector('.rmp-button-hover');
+  var currentActiveButton = container.querySelector('.rmp-button-hover');
   _createEvent('click', currentActiveButton);
 };
 
@@ -101,8 +99,9 @@ var _onKeyDown = function (e) {
   }
 };
 
-// when player reaches durationchange we wire the UI
+// when player reaches loadeddata we wire the UI
 container.addEventListener('loadeddata', function () {
+  document.body.addEventListener('keydown', _onKeyDown);
   playerButtons[0].element = container.querySelector('.rmp-fast-rewind');
   playerButtons[0].element.setAttribute('data-button-id', '0');
   playerButtons[1].element = container.querySelector('.rmp-i-quick-rewind-tv');
@@ -113,7 +112,5 @@ container.addEventListener('loadeddata', function () {
   playerButtons[3].element.setAttribute('data-button-id', '3');
   playerButtons[4].element = container.querySelector('.rmp-fast-forward');
   playerButtons[4].element.setAttribute('data-button-id', '4');
-  document.body.addEventListener('keydown', _onKeyDown);
   _setActiveButton(2);
-  currentActiveButton = container.querySelector('.rmp-button-hover');
 });

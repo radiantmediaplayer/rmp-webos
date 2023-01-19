@@ -10,11 +10,11 @@
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/8.3.5/js/rmp.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.7/js/rmp.min.js"></script>
 	<div id="rmp"></div>
 	<script>
 		var src = {
-			dash: 'https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/manifest.mpd'
+      dash: 'https://storage.googleapis.com/shaka-demo-assets/bbb-dark-truths/dash.mpd'
 		};
 		var settings = {
 			licenseKey: 'your-license-key',
@@ -29,13 +29,13 @@
 			disableKeyboardControl: true,
 			ads: true,
 			adParser: 'rmp-vast',
-			adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=' + Date.now(),
+			adTagUrl: 'https://www.radiantmediaplayer.com/vast/tags/inline-linear.xml',
 			skin: 'tv'
 		};
 		window.rmp = new RadiantMP('rmp');
 		window.rmp.init(settings);
 	</script>
-	<script src="js/player.js"></script>
+	<script src="js/player-ads.js"></script>
 </body>
 
 </html>
