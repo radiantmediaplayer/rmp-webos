@@ -4,40 +4,36 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>DASH DRM Angel One no_auth (Widevine)</title>
-	<link rel="stylesheet" type="text/css" href="css/player.css">
+	<title>DASH DVR</title>
+	<link rel="stylesheet" type="text/css" href="../../css/player.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.7/js/rmp.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/9.2.2/js/rmp.min.js"></script>
 	<div id="rmp"></div>
 	<script>
 		var src = {
-			dash: 'https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine/dash.mpd'
+			dash: 'https://5b44cf20b0388.streamlock.net:8443/dvr/dvr/manifest.mpd?DVR'
 		};
 		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
-			autoplay: true,
 			delayToFade: 5000,
+			autoplay: true,
 			capLevelToPlayerSize: false,
 			ignoreDevicePixelRatio: false,
 			disableKeyboardControl: true,
 			contentMetadata: {
-				title: 'DASH DRM Angel One no_auth (Widevine)',
-			},
-			shakaDrm: {
-				servers: {
-					'com.widevine.alpha': 'https://cwip-shaka-proxy.appspot.com/no_auth'
-				}
+				title: 'DASH DVR',
 			},
 			skin: 'tv'
 		};
+
 		window.rmp = new RadiantMP('rmp');
 		window.rmp.init(settings);
 	</script>
-	<script src="js/player.js"></script>
+	<script src="../../js/player-live.js"></script>
 </body>
 
 </html>

@@ -98,7 +98,7 @@ var _onKeyDown = function (e) {
 };
 
 // when player is ready we wire the UI
-container.addEventListener('loadeddata', function () {
+window.rmp.one('loadeddata', function () {
   playerButtons[0].element = container.querySelector('.rmp-play-pause');
   playerButtons[0].element.setAttribute('data-button-id', '0');
   document.body.addEventListener('keydown', _onKeyDown);

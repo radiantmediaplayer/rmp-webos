@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<title>DASH with skippable video ads (rmp-vast)</title>
-	<link rel="stylesheet" type="text/css" href="css/player.css">
+	<link rel="stylesheet" type="text/css" href="../../css/player.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.7/js/rmp.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/9.2.2/js/rmp.min.js"></script>
 	<div id="rmp"></div>
 	<script>
 		var src = {
@@ -24,18 +24,20 @@
 				title: 'DASH with skippable video ads (rmp-vast)',
 			},
 			autoplay: true,
+			debugLevel: 2,
 			capLevelToPlayerSize: false,
 			ignoreDevicePixelRatio: false,
 			disableKeyboardControl: true,
 			ads: true,
+			forceLegacyDependencies: true,
 			adParser: 'rmp-vast',
-			adTagUrl: 'https://www.radiantmediaplayer.com/vast/tags/inline-linear-skippable.xml',
+			adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=' + Date.now(),
 			skin: 'tv'
 		};
 		window.rmp = new RadiantMP('rmp');
 		window.rmp.init(settings);
 	</script>
-	<script src="js/player-ads.js"></script>
+	<script src="../../js/player-ads.js"></script>
 </body>
 
 </html>

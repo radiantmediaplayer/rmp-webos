@@ -48,6 +48,49 @@ var _onKeyDown = function (e) {
       break;
   }
 };
+var deviceInfo = document.getElementById('device-info');
+function getDeviceInfo(device) {
+  var info =
+    '<table>' +
+    '<tr>' +
+    '<th>modelName</th>' +
+    '<td>' + device.modelName + '</td>' +
+    '<th>version</th>' +
+    '<td>' + device.version + '</td>' +
+    '<th>sdkVersion</th>' +
+    '<td>' + device.sdkVersion + '</td>' +
+    '</tr>' +
+    '<tr>' +
+    '<th>screenWidth</th>' +
+    '<td>' + device.screenWidth + '</td>' +
+    '<th>screenHeight</th>' +
+    '<td>' + device.screenHeight + '</td>' +
+    '<th>ddrSize</th>' +
+    '<td>' + device.ddrSize + '</td>' +
+    '</tr>' +
+    '<tr>' +
+    '<th>uhd</th>' +
+    '<td>' + device.uhd + '</td>' +
+    '<th>uhd8K</th>' +
+    '<td>' + device.uhd8K + '</td>' +
+    '<th>oled</th>' +
+    '<td>' + device.oled + '</td>' +
+    '</tr>' +
+    '<tr>' +
+    '<th>hdr10</th>' +
+    '<td>' + device.hdr10 + '</td>' +
+    '<th>dolbyVision</th>' +
+    '<td>' + device.dolbyVision + '</td>' +
+    '<th>dolbyAtmos</th>' +
+    '<td>' + device.dolbyAtmos + '</td>' +
+    '</tr>' +
+    '</table>';
+  deviceInfo.innerHTML = info;
+}
+
+webOS.deviceInfo(function (device) {
+  getDeviceInfo(device);
+});
 
 // when player is ready we wire the UI
 document.addEventListener('keydown', _onKeyDown);

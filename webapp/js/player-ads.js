@@ -113,7 +113,7 @@ var _onKeyDown = function (e) {
 };
 
 // when player reaches loadeddata we wire the UI
-container.addEventListener('loadeddata', function () {
+window.rmp.one('loadeddata', function () {
   document.body.addEventListener('keydown', _onKeyDown);
   var isAdOnStage = window.rmp.getAdOnStage();
   if (isAdOnStage) {
@@ -132,7 +132,7 @@ container.addEventListener('loadeddata', function () {
   _setActiveButton(2);
 });
 
-container.addEventListener('adstarted', function () {
+window.rmp.on('adstarted', function () {
   playerButtons = playerButtonsForAds;
   playerButtons[0].element = container.querySelector('.rmp-play-pause');
   playerButtons[0].element.setAttribute('data-button-id', '0');
@@ -145,7 +145,7 @@ container.addEventListener('adstarted', function () {
   _setActiveButton(0);
 });
 
-container.addEventListener('addestroyed', function () {
+window.rmp.on('addestroyed', function () {
   playerButtons = playerButtonsForContent;
   playerButtons[0].element = container.querySelector('.rmp-fast-rewind');
   playerButtons[0].element.setAttribute('data-button-id', '0');

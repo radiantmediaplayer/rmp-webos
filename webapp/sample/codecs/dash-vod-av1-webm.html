@@ -4,38 +4,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>DASH with video ads (rmp-vast)</title>
-	<link rel="stylesheet" type="text/css" href="css/player.css">
+	<title>DASH VOD AV1 (WebM container)</title>
+	<link rel="stylesheet" type="text/css" href="../../css/player.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.7/js/rmp.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/9.2.2/js/rmp.min.js"></script>
 	<div id="rmp"></div>
 	<script>
 		var src = {
-      dash: 'https://storage.googleapis.com/shaka-demo-assets/bbb-dark-truths/dash.mpd'
+			dash: 'https://www.radiantmediaplayer.com/media/dash/4k-av1/manifest.mpd'
 		};
 		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
 			delayToFade: 5000,
-			contentMetadata: {
-				title: 'DASH with video ads (rmp-vast)',
-			},
 			autoplay: true,
 			capLevelToPlayerSize: false,
 			ignoreDevicePixelRatio: false,
 			disableKeyboardControl: true,
-			ads: true,
-			adParser: 'rmp-vast',
-			adTagUrl: 'https://www.radiantmediaplayer.com/vast/tags/inline-linear.xml',
+			contentMetadata: {
+				title: 'DASH VOD AV1 (WebM container)',
+			},
 			skin: 'tv'
 		};
 		window.rmp = new RadiantMP('rmp');
 		window.rmp.init(settings);
 	</script>
-	<script src="js/player-ads.js"></script>
+	<script src="../../js/player.js"></script>
 </body>
-
+ss
 </html>

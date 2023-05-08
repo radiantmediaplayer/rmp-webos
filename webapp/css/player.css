@@ -11,11 +11,12 @@
 }
 
 /* 
- * When a module is open: keep the control bar visible to 
+ * When a module is open or an ad is displayed: keep the control bar visible to 
  * allow remote control navigation on control bar buttons 
  * also hide the play/pause button on top right corner
  */
-.rmp-tv.rmp-module-open-ui .rmp-control-bar {
+.rmp-tv.rmp-module-open-ui .rmp-control-bar,
+.rmp-tv.rmp-linear-ad-ui .rmp-control-bar {
   display: block !important;
   opacity: 1 !important;
   visibility: visible !important;

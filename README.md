@@ -25,9 +25,14 @@ Our demo holds a basic appinfo.json file that is typical of LG TV app. This demo
 
 ## Support notes
 
-- We support streaming to LG TVs in MPEG-DASH or CMAF HLS (HLS in MPEG-TS format is not supported).
+- We support streaming to LG TVs in MPEG-DASH or HLS (CMAF or MPEG-TS)
+- We support video advertisement with the following configuration 
+  - Video ads with rmp-vast and HLS (`hlsEngine: 'hlsjs'` setting)
+  - Video ads with Google IMA and HLS with `forceNativeHlsOverHlsJS: true` setting
+  - Video ads with rmp-vast and MPEG-DASH are only supported on latest version of webOS (webOS TV 22+)
+  - Video ads with Google IMA and MPEG-DASH are NOT supported
 - According to our tetsing, AV1 support can be clunky on older webOS versions (even if they advertise support for it). AVC, VP9 or HEVC should be preferred if you wish to support older versions of webOS.
-- Google IMA (video ads) is not currently supported, please use our rmp-vast parser to display video ads on LG Smart TV.
+
 
 ## Issues
 

@@ -4,35 +4,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>DASH VOD AV1 (MP4 container)</title>
-	<link rel="stylesheet" type="text/css" href="css/player.css">
+	<title>CMAF HLS VOD AVC</title>
+	<link rel="stylesheet" type="text/css" href="../../css/player.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.7/js/rmp.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/9.2.2/js/rmp.min.js"></script>
 	<div id="rmp"></div>
 	<script>
 		var src = {
-			dash: 'https://www.radiantmediaplayer.com/media/dash/fhd-av1-aac/manifest.mpd'
+			hls: 'https://www.radiantmediaplayer.com/media/v1/avc-mp4/hls/playlist.m3u8'
 		};
 		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
-			delayToFade: 5000,
 			autoplay: true,
 			capLevelToPlayerSize: false,
 			ignoreDevicePixelRatio: false,
 			disableKeyboardControl: true,
+			delayToFade: 5000,
 			contentMetadata: {
-				title: 'DASH VOD AV1 (MP4 container)',
+				title: 'CMAF HLS VOD AVC',
 			},
 			skin: 'tv'
 		};
 		window.rmp = new RadiantMP('rmp');
 		window.rmp.init(settings);
 	</script>
-	<script src="js/player.js"></script>
+	<script src="../../js/player.js"></script>
 </body>
 
 </html>

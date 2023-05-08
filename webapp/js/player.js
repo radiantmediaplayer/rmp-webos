@@ -100,7 +100,7 @@ var _onKeyDown = function (e) {
 };
 
 // when player reaches loadeddata we wire the UI
-container.addEventListener('loadeddata', function () {
+window.rmp.one('loadeddata', function () {
   document.body.addEventListener('keydown', _onKeyDown);
   playerButtons[0].element = container.querySelector('.rmp-fast-rewind');
   playerButtons[0].element.setAttribute('data-button-id', '0');
