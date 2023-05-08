@@ -1,6 +1,6 @@
 {
   "name": "rmp-webos",
-  "version": "1.0.1",
+  "version": "3.0.0",
   "author": "Radiant Media Player <support@radiantmediaplayer.com>",
   "description": "A demo app for using Radiant Media Player in a WebOS TV app (LG smart TV)",
   "repository": {
