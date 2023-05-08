@@ -31,7 +31,7 @@ Our demo holds a basic appinfo.json file that is typical of LG TV app. This demo
   - Video ads with Google IMA and HLS with `forceNativeHlsOverHlsJS: true` setting
   - Video ads with rmp-vast and MPEG-DASH are only supported on latest version of webOS (webOS TV 22+) - you will have to filter out previous versions of webOS (you may use webOSTV.js) and disable ads for those versions
   - Video ads with Google IMA and MPEG-DASH are NOT supported
-- According to our tetsing, AV1 support can be clunky on older webOS versions (even if they advertise support for it). AVC, VP9 or HEVC should be preferred if you wish to support older versions of webOS.
+- According to our testing, AV1 support can be clunky on older webOS versions (even if they advertise support for it). AVC, VP9 or HEVC should be preferred if you wish to support older versions of webOS
 
 
 ## Issues
